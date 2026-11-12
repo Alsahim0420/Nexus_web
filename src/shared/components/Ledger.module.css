@@ -1,0 +1,82 @@
+.ledger {
+  border: 1px solid var(--app-border);
+  border-radius: var(--radius-ledger);
+  overflow: hidden;
+}
+.ledger > * + * {
+  border-top: 1px solid var(--app-border);
+}
+.row {
+  display: flex;
+}
+.row > * {
+  flex: 1;
+}
+.row > * + * {
+  border-left: 1px solid var(--app-border);
+}
+
+.cell {
+  padding: 14px 16px 12px;
+}
+.label {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--app-text-disabled);
+  transition: color 120ms;
+}
+.cell:focus-within .label {
+  color: var(--app-text-primary);
+}
+.invalid .label,
+.invalid:focus-within .label {
+  color: var(--tone-danger);
+}
+.body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+.value {
+  flex: 1;
+  min-width: 0;
+}
+.error {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tone-danger);
+}
+
+/* Campo sin caja propia: la ficha es la caja */
+.input {
+  width: 100%;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--app-text-primary);
+  caret-color: var(--app-text-primary);
+}
+.input::placeholder {
+  color: var(--app-text-disabled);
+  font-weight: 600;
+}
+.input:focus,
+.input:focus-visible {
+  outline: none;
+}
+.input:disabled {
+  opacity: 0.5;
+}
+/* Autocompletado del navegador sin fondo amarillo/azul */
+.input:-webkit-autofill {
+  -webkit-text-fill-color: var(--app-text-primary);
+  -webkit-box-shadow: 0 0 0 1000px var(--app-background) inset;
+  transition: background-color 9999s;
+}

@@ -1,0 +1,72 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--app-text-primary);
+}
+.control {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: 1px solid var(--app-border);
+  border-radius: 10px;
+  background: var(--app-background);
+  transition:
+    border-color 120ms,
+    box-shadow 120ms;
+}
+.control:hover {
+  border-color: var(--app-text-disabled);
+}
+.control:focus-within {
+  border-color: var(--app-border-focused);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--app-border-focused) 16%, transparent);
+}
+.invalid,
+.invalid:hover,
+.invalid:focus-within {
+  border-color: var(--tone-danger);
+}
+.invalid:focus-within {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tone-danger) 20%, transparent);
+}
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0 14px;
+  border: 0;
+  background: transparent;
+  font-size: 15px;
+  color: var(--app-text-primary);
+  caret-color: var(--app-text-primary);
+}
+.input::placeholder {
+  color: var(--app-text-disabled);
+}
+.input:focus,
+.input:focus-visible {
+  outline: none;
+}
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.input:-webkit-autofill {
+  -webkit-text-fill-color: var(--app-text-primary);
+  -webkit-box-shadow: 0 0 0 1000px var(--app-background) inset;
+  transition: background-color 9999s;
+}
+.trailing {
+  display: flex;
+  padding-right: 6px;
+}
+.error {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--tone-danger);
+}

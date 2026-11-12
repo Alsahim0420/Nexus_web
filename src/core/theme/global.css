@@ -1,0 +1,84 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--app-background);
+  color: var(--app-text-primary);
+  font-family: var(--font-system);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--app-border-focused);
+  outline-offset: 3px;
+}
+
+/* Roles tipográficos reutilizables (DESIGN.md §3) */
+.t-hero {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1.05;
+}
+.t-screen-title {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+}
+.t-ledger-value {
+  font-size: 15px;
+  font-weight: 800;
+}
+.t-body {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--app-text-secondary);
+}
+.t-caps {
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--app-text-secondary);
+}
+
+/* TapScale: todo lo tocable se encoge a 0.94 en 120 ms al presionarlo */
+.tap-scale {
+  transition: transform 120ms ease-out;
+}
+.tap-scale:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tap-scale {
+    transition: none;
+  }
+}

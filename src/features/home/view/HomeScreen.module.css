@@ -1,0 +1,18 @@
+.page {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-gutter) 32px;
+}
+.appBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0 18px;
+}
+.section {
+  margin-top: var(--space-section);
+}
+.soon {
+  margin-top: var(--space-tight);
+}

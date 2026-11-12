@@ -1,0 +1,52 @@
+/*
+ * Tokens de Nexus — espejo de DESIGN.md / lib/core/theme/app_colors.dart.
+ * Usa SIEMPRE estas variables en lugar de colores escritos a mano.
+ */
+:root {
+  /* AppColors */
+  --app-background: #000000;
+  --app-surface: #16181c;
+  --app-surface-muted: #202327;
+  --app-surface-elevated: #25282c;
+  --app-text-primary: #e7e9ea;
+  --app-text-secondary: #71767b;
+  --app-text-disabled: #536471;
+  --app-border: #2f3336;
+  --app-border-focused: #e7e9ea;
+  --app-primary: #ffffff;
+  --app-on-primary: #000000;
+  --app-shadow: rgba(0, 0, 0, 0.4);
+
+  /* NexusTones — solo para comunicar un estado */
+  --tone-danger: #ff5a5f;
+  --tone-success: #2fb36d;
+  --tone-warning: #ffb547;
+  --tone-info: #5aa9ff;
+  --tone-star: #ffc94d;
+
+  /* Espaciado */
+  --space-gutter: 20px;
+  --space-section: 32px;
+  --space-block: 24px;
+  --space-row: 14px;
+  --space-label: 10px;
+  --space-tight: 6px;
+
+  /* Radios */
+  --radius-pill: 999px;
+  --radius-sheet: 32px;
+  --radius-media: 24px;
+  --radius-card: 20px;
+  --radius-tile: 16px;
+  --radius-ledger: 14px;
+  --radius-skeleton: 12px;
+
+  /* Medidas */
+  --content-max-width: 720px;
+  --primary-button-height: 54px;
+  --secondary-button-height: 46px;
+
+  /* Tipografía: fuente del sistema; la jerarquía sale del peso y el tamaño */
+  --font-system: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Roboto, 'Segoe UI', 'Helvetica Neue',
+    Arial, sans-serif;
+}

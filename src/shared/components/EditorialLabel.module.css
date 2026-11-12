@@ -1,0 +1,9 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-label);
+}
+.trailing {
+  color: var(--app-text-disabled);
+}

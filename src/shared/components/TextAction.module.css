@@ -1,0 +1,14 @@
+.action {
+  padding: 6px 2px;
+  border: 0;
+  background: none;
+  color: var(--app-text-primary);
+  cursor: pointer;
+}
+.action:hover:not(:disabled) {
+  opacity: 0.7;
+}
+.action:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
